@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMind Mark Mindmap Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .upload-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .mindmap-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            min-height: 500px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #mindmap {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>XMind Mark Mindmap Viewer</h1>
+    </header>
+
+    <div class="container">
+        <div class="upload-section">
+            <h2>Load Mindmap</h2>
+            <p>Upload an XMind file or select a sample mindmap</p>
+            
+            <div>
+                <input type="file" id="fileInput" accept=".xmind" />
+                <button id="loadFileButton">Load File</button>
+            </div>
+            
+            <div style="margin-top: 10px;">
+                <button id="loadSampleButton">Load Sample Mindmap</button>
+            </div>
+        </div>
+
+        <div class="mindmap-container">
+            <h2>Mindmap Viewer</h2>
+            <div id="mindmap"></div>
+        </div>
+    </div>
+
+    <!-- Import xmindmark from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@xmind/xmindmark/dist/umd/xmindmark.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
